@@ -36,7 +36,14 @@ app.set('views', path.join(__dirname, 'views')); //Sets the views directory for 
 
 //Configure routes
 app.get('/', function (req, res) { //Takes request and response object just like Node.js
-	res.render('index'); //Should return date and time
+	res.render('index', {
+		title: 'My App',
+		items: [
+			{id: 1, desc: 'foo'},
+			{id: 2, desc: 'bar'},
+			{id: 3, desc: 'baz'}
+		]
+	}); //Should return date and time
 });
 
 
