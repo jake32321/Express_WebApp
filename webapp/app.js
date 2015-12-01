@@ -55,7 +55,7 @@ app.post('/add', function (req, res) { //Allows the user to post to the page
 		desc: newItem
 	});
 	res.redirect('/'); //Redirects to the home page preventing submission errors 
-})
+});
 
 app.listen(1337, function () {
 	console.log('Starting the server at http://127.0.0.1:1337');
