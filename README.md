@@ -46,3 +46,7 @@ to the list.  Maybe even possibly remove data.</p>
 	</ul>
 </body>
 ```
+
+<h3>Current Build Status</h3>
+### Status
+[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
