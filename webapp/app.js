@@ -8,18 +8,12 @@ var itemsList = [];
 
 /****************************************
 
-FILES ARE FOR DEMONSTRATION PURPOSES ONLY
+APP IS FOR DEMONSTRATION PURPOSES
 
 Author: Jacob Reed
 Last Update: 30 November 2015
-GitHub Repository:
+GitHub Repository: https://github.com/jake32321/Express_WebApp.git
 GitHub Username: Jake32321
-Contributors: Jake Reed
-
-Hello there! I'm doing cool things with 
-Node.js and ExpressJS.  If you want to
-see what I am doing visit me over on 
-GitHub, check out my stuff, and fork it!
 
 *****************************************/
 
