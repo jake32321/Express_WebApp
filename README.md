@@ -46,3 +46,17 @@ to the list.  Maybe even possibly remove data.</p>
 	</ul>
 </body>
 ```
+<h3>30 Nov 2015 (3)</h3>
+<p>Created a way to add and display input to the app. Redirects <br>
+user to prevent submission errors when complete or if the user <br>
+refreshes the page</p>
+```JavaScript
+itemsList.push({ //Pushes the new item to the list
+		id: itemsList.length + 1,
+		desc: newItem
+	});
+	res.redirect('/'); //Redirects to the home page preventing submission errors 
+```
+
+<h3>Current Build Status</h3>
+[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
