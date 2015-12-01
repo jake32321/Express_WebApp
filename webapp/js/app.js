@@ -34,6 +34,9 @@ to make use of better options.
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); //Sets the views directory for the ejs files
 
+//Adds the middleware for use 
+app.use();
+
 //Configure routes
 app.get('/', function (req, res) { //Takes request and response object just like Node.js
 	res.render('index', {
@@ -43,9 +46,13 @@ app.get('/', function (req, res) { //Takes request and response object just like
 			{id: 2, desc: 'bar'},
 			{id: 3, desc: 'baz'}
 		]
-	}); //Should return date and time
+	}); //Should return date, time, and items list
 });
 
+app.post('/add', function (req, res) { //Allows the user to post to the page 
+	var newItem = req.body.newItem; //Allows for us to add to the list (requires use of middleware)
+	console.log(newItem); //Logs new item
+})
 
 app.listen(1337, function () {
 	console.log('Starting the server at http://127.0.0.1:1337');
