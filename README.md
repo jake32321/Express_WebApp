@@ -31,3 +31,18 @@ app.listen(1337, function () {
 	console.log('Starting the server at http://127.0.0.1:1337');
 });
 ```
+<h3>30 Nov 2015 (2)</h3>
+<p>Added a list to the page.  Working on a way to add more data <br>
+to the list.  Maybe even possibly remove data.</p>
+
+```HTML
+<body>
+	<h1><%= title %></h1>
+	<%= new Date() %>
+	<ul>
+		<% for (var i  = 0; i < items.length; i++) { %>
+			<li><%= items[i].desc %></li> <!-- Lists all of the descendant for each of the items in the items list -->
+		<% } %>
+	</ul>
+</body>
+```
