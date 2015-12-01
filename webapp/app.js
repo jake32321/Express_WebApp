@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var itemsList = [];
 
-/****************************************
+/******************************************************************
 
 APP IS FOR DEMONSTRATION PURPOSES
 
@@ -15,7 +15,7 @@ Last Update: 30 November 2015
 GitHub Repository: https://github.com/jake32321/Express_WebApp.git
 GitHub Username: Jake32321
 
-*****************************************/
+******************************************************************/
 
 /*
 Node is pretty crappy when it comes to doing pages since you would have to do
@@ -38,7 +38,7 @@ app.get('/', function (req, res) { //Takes request and response object just like
 	res.render('index', {
 		title: 'My App',
 		items: itemsList
-	}); //Should return date, time, and items list
+	}); //Should return titles, date, time, and items list
 });
 
 app.post('/add', function (req, res) { //Allows the user to post to the page 
