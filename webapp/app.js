@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var app = express();
-var itemsList = [];
+
 
 /******************************************************************
 
@@ -30,6 +30,14 @@ to make use of better options.
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); //Sets the views directory for the ejs files
 
+//Imports the routes from todos.js
+app.use(require('todos'));
+
+/*
+If a moount point is required you could use...
+app.use('/ex_mount', 'name_of_module');
+*/
+
 //Adds the middleware for use 
 app.use(bodyParser());
 app.use(express.static(path.join(__dirname, 'bower_components'))); //Allows the app to serve static files from the bower_components file
@@ -47,24 +55,6 @@ app.use(function (err, req, res, next){
 		message: err.message,
 		error: err
 	});
-});
-
-//Configure routes
-app.get('/', function (req, res) { //Takes request and response object just like Node.js
-	res.render('index', {
-		title: 'My App',
-		items: itemsList
-	}); //Should return titles, date, time, and items list
-});
-
-app.post('/add', function (req, res) { //Allows the user to post to the page 
-	var newItem = req.body.newItem; //Allows for us to add to the list (requires use of middleware)
-	console.log(newItem); //Logs new item
-	itemsList.push({ //Pushes the new item to the list
-		id: itemsList.length + 1,
-		desc: newItem
-	});
-	res.redirect('/'); //Redirects to the home page preventing submission errors 
 });
 
 app.listen(1337, function () {
