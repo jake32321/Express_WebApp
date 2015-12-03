@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome To Jake's App</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<h1><%= title %></h1>
+		<%= new Date() %>
+		<ul>
+			<% for (var i  = 0; i < items.length; i++) { %>
+				<li><%= items[i].desc %></li> <!-- Lists 	all of the descendant for each of the 	items in the items list -->
+			<% } %>
+		</ul>
+		<form action="/add" method="post">
+			<input type="text" name="newItem">
+			<input type="submit">
+		</form>
+	</div>
+	<!-- Allows the user to requets the scripts needed for the page -->
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

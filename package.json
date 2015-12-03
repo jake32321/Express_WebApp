@@ -1,0 +1,24 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Simple webapp for testing purposes ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Reed",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jake32321/Express_WebApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jake32321/Express_WebApp/issues"
+  },
+  "homepage": "https://github.com/jake32321/Express_WebApp#readme"
+}
