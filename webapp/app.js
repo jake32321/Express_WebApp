@@ -34,6 +34,12 @@ app.set('views', path.join(__dirname, 'views')); //Sets the views directory for 
 app.use(bodyParser());
 app.use(express.static(path.join(__dirname, 'bower_components'))); //Allows the app to serve static files from the bower_components file
 
+//Middleware for logging information to the console
+app.use(function (req, res, next){
+	console.log(req.method+' '+req.url+' '+(new Date())); //Sends access data to the console
+	next(); //THIS IS ABSOLUTELY CRUCIAL
+});
+
 //Configure routes
 app.get('/', function (req, res) { //Takes request and response object just like Node.js
 	res.render('index', {
