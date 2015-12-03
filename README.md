@@ -7,6 +7,8 @@ Web app I have been working on using Node.js and ExpressJS.  Mostly for practice
 page web app.  Still needs some work but is meant almost <br>
 entirely for demonstrational purposes.</p>
 <br>
+<h1>Current Build Status</h1>
+[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
 <h1>Edit History</h1>
 <h3>30 Nov 2015</h3>
 <p>Made the first commit with the basic structure of the <br>
@@ -58,5 +60,4 @@ itemsList.push({ //Pushes the new item to the list
 	res.redirect('/'); //Redirects to the home page preventing submission errors 
 ```
 
-<h3>Current Build Status</h3>
-[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
+
