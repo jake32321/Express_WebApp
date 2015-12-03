@@ -57,7 +57,10 @@ app.use(function (err, req, res, next){
 	});
 });
 
-app.listen(1337, function () {
+//Sets the port for Azure
+var port = process.env.PORT || 1337;
+
+app.listen(port, function () {
 	console.log('Starting the server at http://127.0.0.1:1337');
 });
 
