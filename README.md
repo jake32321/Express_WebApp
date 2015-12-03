@@ -59,5 +59,6 @@ itemsList.push({ //Pushes the new item to the list
 	});
 	res.redirect('/'); //Redirects to the home page preventing submission errors 
 ```
-
-
+<h3>2 December 2015</h3>
+<p>Just added bower, bootstrap, and jquery to the app.  Further<br>
+progress is coming soon.</p>
