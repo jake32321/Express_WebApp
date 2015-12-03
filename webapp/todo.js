@@ -1,8 +1,17 @@
+/*******************************
+
+Author: Jacob Reed
+Last Update: 30 November 2015
+GitHub Repository: https://github.com/jake32321/Express_WebApp.git
+GitHub Username: Jake32321
+
+*******************************/
+
 var express = require('express');
 
-var itemsList = [];
 //Creates routes
 var router = express.Router();
+var itemsList = [];
 
 router.get('/', function (req, res) { //Takes request and response object just like Node.js
 	res.render('index', {
