@@ -40,6 +40,15 @@ app.use(function (req, res, next){
 	next(); //THIS IS ABSOLUTELY CRUCIAL
 });
 
+//Middleware for handling errors
+app.use(function (err, req, res, next){
+	res.status(err.status || 500); //Checks the error
+	res.render('error', { //Renders a visible error to the user
+		message: err.message,
+		error: err
+	});
+});
+
 //Configure routes
 app.get('/', function (req, res) { //Takes request and response object just like Node.js
 	res.render('index', {
