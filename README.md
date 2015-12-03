@@ -63,7 +63,7 @@ itemsList.push({ //Pushes the new item to the list
 <p>Just added bower, bootstrap, and jquery to the app.  Further<br>
 progress is coming soon.</p>
 
-<h3>2 December 2015</h3>
+<h3>2 December 2015 (2)</h3>
 <p>Added new custom middleware for logging info to the console.</p>
 ```JavaScript
 app.use(function (req, res, next){
