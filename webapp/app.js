@@ -32,6 +32,7 @@ app.set('views', path.join(__dirname, 'views')); //Sets the views directory for 
 
 //Adds the middleware for use 
 app.use(bodyParser());
+app.use(express.static(path.join(__dirname, 'bower_components'))); //Allows the app to serve static files from the bower_components file
 
 //Configure routes
 app.get('/', function (req, res) { //Takes request and response object just like Node.js
