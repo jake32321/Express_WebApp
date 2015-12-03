@@ -30,17 +30,17 @@ to make use of better options.
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); //Sets the views directory for the ejs files
 
+//Adds the middleware for use 
+app.use(bodyParser());
+app.use(express.static(path.join(__dirname, 'bower_components'))); //Allows the app to serve static files from the bower_components file
+
 //Imports the routes from todos.js
-app.use(require('todos'));
+app.use(require('./todo'));
 
 /*
 If a moount point is required you could use...
 app.use('/ex_mount', 'name_of_module');
 */
-
-//Adds the middleware for use 
-app.use(bodyParser());
-app.use(express.static(path.join(__dirname, 'bower_components'))); //Allows the app to serve static files from the bower_components file
 
 //Middleware for logging information to the console
 app.use(function (req, res, next){

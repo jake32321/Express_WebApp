@@ -20,3 +20,6 @@ router.post('/add', function (req, res) { //Allows the user to post to the page
 	});
 	res.redirect('/'); //Redirects to the home page preventing submission errors 
 });
+
+//Exports the router for use in the app.
+module.exports = router;
