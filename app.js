@@ -29,6 +29,7 @@ to make use of better options.
 //Configures the view settings
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); //Sets the views directory for the ejs files
+app.set('port', (process.env.PORT || 5000)); //Sets up the port for heroku
 
 //Adds the middleware for use 
 app.use(bodyParser());
@@ -57,11 +58,8 @@ app.use(function (err, req, res, next){
 	});
 });
 
-//Sets the port for Azure
-var port = process.env.PORT || 1337;
-
-app.listen(port, function () {
-	console.log('Starting the server at http://127.0.0.1:1337');
+app.listen(app.get('port'), function () {
+	console.log('App is starting at port: ', app.get('port'));
 });
 
 
